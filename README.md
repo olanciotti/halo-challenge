@@ -35,6 +35,6 @@ npm run cy:run
 
 Also Cucumber tags can be used to run the tests by specific groups:
 - To run the tests associated with place an order functionality:
-  npx cypress run --env tags=@placeOrderWithUser
+  npx cypress run --env tags=@placeOrder
 - To run the tests associated to login page:
   npx cypress run --env tags=@login
