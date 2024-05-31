@@ -8,13 +8,13 @@ Test automatiom framework implemented with the following Tools and Libs:
 
 📋 Pre-requisites:
 
-- Install Node using the following command:
-  
-  node -v
+- Node should be installed. Commands to check node version:
 
-- Install NPM using the following command:
-  
-  npm -v
+node -v
+
+npm -v
+
+In case the user does not have it installed it, instructions to do it can be found here depending each OS: https://nodejs.org/en/download/package-manager
 
 - Clone project
 
