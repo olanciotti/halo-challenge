@@ -8,15 +8,17 @@ Test automatiom framework implemented with the following Tools and Libs:
 
 📋 Pre-requisites:
 
-- Install Node
+- Install Node using the following command:
+  
   node -v
 
-- Install NPM
+- Install NPM using the following command:
+  
   npm -v
 
 - Clone project
 
-- Install dependencies package.json
+- Install dependencies package.json using the following command:
 
   
   $ npm install
