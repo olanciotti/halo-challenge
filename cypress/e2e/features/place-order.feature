@@ -3,6 +3,7 @@ Feature: Place Order in Automation Test Store page
     Background:
         Given I access to the Automation Test Store as guest
 
+    @placeOrder
     Scenario: A user should be able to place an order in the cart as a guest
 
         When I select "Fragrance" option from the products navigation bar
@@ -18,6 +19,7 @@ Feature: Place Order in Automation Test Store page
         And I proceed with the checkout confirmation
         Then I see the order confirmation page as guest user
 
+    @placeOrder
     Scenario: A user should be able to place an order in the cart logged in
 
         When I select "Login or register" option from the main navigation bar
@@ -41,22 +43,24 @@ Feature: Place Order in Automation Test Store page
         And I proceed with the checkout confirmation
         Then I see the order confirmation page as logged in user
 
+    @placeOrder
     Scenario: A user should be able to place an order after updating the item quantity in the cart as a guest
 
-            When I select "Fragrance" option from the products navigation bar
-            And I add a product that contains "Perfume" to the cart
-            And I increase the first product quantity to "3"
-            And I complete Estimate Shipping & Taxes section
-                | countrycode | country       | state   |
-                | 223         | United States | Alabama |
-            And I proceed with the checkout as guest
-            And I fill Your Personal details form section
-            And I fill Your Address form section with the following values and click Continue button
-                | address         | country       | city   | region  | zipcode |
-                | No 12 Pt Street | United States | Auburn | Alabama | 36801   |
-            And I proceed with the checkout confirmation
-            Then I see the order confirmation page as guest user
+        When I select "Fragrance" option from the products navigation bar
+        And I add a product that contains "Perfume" to the cart
+        And I increase the first product quantity to "3"
+        And I complete Estimate Shipping & Taxes section
+            | countrycode | country       | state   |
+            | 223         | United States | Alabama |
+        And I proceed with the checkout as guest
+        And I fill Your Personal details form section
+        And I fill Your Address form section with the following values and click Continue button
+            | address         | country       | city   | region  | zipcode |
+            | No 12 Pt Street | United States | Auburn | Alabama | 36801   |
+        And I proceed with the checkout confirmation
+        Then I see the order confirmation page as guest user
 
+    @placeOrder
     Scenario: A user should be able to place an order after updating the item quantity in the cart logged in
 
         When I select "Login or register" option from the main navigation bar

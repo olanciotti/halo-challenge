@@ -3,6 +3,7 @@ Feature: Login in Automation Test Store Page
         Background:
                 Given I access to the Automation Test Store as guest
 
+        @login
         Scenario: A new user registers and is able to log in after the registration is completed
 
                 When I select "Login or register" option from the main navigation bar
